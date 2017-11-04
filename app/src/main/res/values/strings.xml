@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Cars</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_details">Add Details</string>
+    <string name="view_details">View Details</string>
+    <string name="next">Next</string>
+    <string name="car_owner_name">Enter car owner name</string>
+    <string name="please_specify_number_of_cars">Please specify number of cars</string>
+    <string name="enter_details_here">Enter details here</string>
+</resources>
