@@ -31,15 +31,10 @@ import com.application.cars.cars.R;
  * create an instance of this fragment.
  */
 public class AcceptCarDetails extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
 
     EditText addNoOfCars;
     Button next, submit;
@@ -51,14 +46,6 @@ public class AcceptCarDetails extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AcceptCarDetails.
-     */
     // TODO: Rename and change types and number of parameters
     public static AcceptCarDetails newInstance(String param1, String param2) {
         AcceptCarDetails fragment = new AcceptCarDetails();
@@ -88,6 +75,7 @@ public class AcceptCarDetails extends Fragment {
         next = v.findViewById(R.id.next_add_cars_layout);
         tableLayout = v.findViewById(R.id.add_views);
         submit = v.findViewById(R.id.submit_data);
+
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,6 +83,7 @@ public class AcceptCarDetails extends Fragment {
                 init(Integer.valueOf(addNoOfCars.getText().toString()), getContext());
             }
         });
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,16 +103,19 @@ public class AcceptCarDetails extends Fragment {
             TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
             row.setWeightSum(1f);
             row.setLayoutParams(lp);
+
             EditText carCompany = new EditText(mContext);
             lp = new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 0.3f);
             carCompany.setLayoutParams(lp);
             carCompany.setHint("Car company");
             carCompany.setTextSize(15f);
+
             EditText model = new EditText(mContext);
             lp = new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 0.3f);
             model.setLayoutParams(lp);
             model.setHint("Model");
             model.setTextSize(15f);
+
             EditText regNo = new EditText(mContext);
             lp = new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 0.4f);
             regNo.setLayoutParams(lp);
@@ -132,6 +124,7 @@ public class AcceptCarDetails extends Fragment {
             row.addView(carCompany);
             row.addView(model);
             row.addView(regNo);
+
             tableLayout.addView(row, i);
         }
     }
