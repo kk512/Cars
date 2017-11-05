@@ -190,8 +190,8 @@ public class DBHelper extends SQLiteOpenHelper {
                 + CAR_COLUMN_USER_CAR + " = '" + userId + "'";
 
         SQLiteDatabase db = this.getReadableDatabase();
-
         Cursor cursor = db.rawQuery(query, null);
+
         if (cursor.moveToFirst()) {
             do {
                 db.beginTransaction();
